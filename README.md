@@ -1,6 +1,24 @@
-# GreenQuest / NOVA
+<p align="center">
+  <img src="assets/icon.png" alt="GreenQuest / NOVA app logo" width="144" />
+</p>
 
-GreenQuest / NOVA is an Android-first, cross-platform habit and challenge app built with Expo, React Native, and TypeScript. It helps people explore small sustainability-related actions, track self-reported challenge progress, and view an indicative estimate from their own weekly travel and electricity inputs.
+<h1 align="center">GreenQuest / NOVA</h1>
+
+<p align="center">
+  An Android-first, cross-platform habit and challenge app built with Expo, React Native, and TypeScript.
+</p>
+
+<p align="center">
+  <a href="https://github.com/rayhan60611/G-Quest/releases/download/v1.0.0/GreenQuest-NOVA-arm64.apk">
+    <img src="assets/download-apk-button.svg" alt="Download GreenQuest / NOVA for Android arm64" width="330" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/rayhan60611/G-Quest/releases/tag/v1.0.0">View release notes</a>
+</p>
+
+GreenQuest / NOVA helps people explore small sustainability-related actions, track self-reported challenge progress, and view an indicative estimate from their own weekly travel and electricity inputs.
 
 ## Features
 
@@ -111,13 +129,17 @@ npx tsc --noEmit
 
 The repository ignores generated native projects and APK build outputs. To generate an Android project and build locally:
 
+**Download:** [GreenQuest / NOVA Android arm64 APK (v1.0.0 preview)](https://github.com/rayhan60611/G-Quest/releases/download/v1.0.0/GreenQuest-NOVA-arm64.apk) · [Release notes](https://github.com/rayhan60611/G-Quest/releases/tag/v1.0.0)
+
+This 36 MB preview build is for arm64 Android devices and is signed with a test/debug key. It is not intended for Google Play distribution.
+
 ```bash
 npx expo prebuild --platform android
 cd android
 ./gradlew assembleRelease
 ```
 
-The APK is written to `android/app/build/outputs/apk/release/app-release.apk`. A locally generated APK may use a debug/test signing key; configure a release signing key before distributing it or publishing to Google Play.
+The locally built APK is written to `android/app/build/outputs/apk/release/app-release.apk`. Configure a release signing key before distributing a production build or publishing to Google Play.
 
 For EAS cloud builds, authenticate with Expo first. The EAS profiles in `eas.json` include an internal Android APK profile and an iOS Simulator profile.
 
