@@ -1,17 +1,21 @@
 {
   "expo": {
-    "name": "gq-project-staging",
-    "slug": "gq-project-staging",
+    "name": "GreenQuest / NOVA",
+    "slug": "greenquest-nova",
+    "scheme": "greenquest",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "ios": {
+      "bundleIdentifier": "com.greenquest.nova",
       "supportsTablet": true
     },
     "android": {
+      "package": "com.greenquest.nova",
+      "allowBackup": false,
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#19611E",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -20,6 +24,30 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "imageWidth": 200,
+          "backgroundColor": "#F2F7EE"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "GreenQuest uses your photos only when you choose a profile picture. Your picture stays on this device.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ],
+      "expo-sqlite"
+    ],
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
