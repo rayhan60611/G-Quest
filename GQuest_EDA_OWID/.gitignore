@@ -1,0 +1,8 @@
+# Large, regenerable upstream files (obtain via original project)
+datasets/raw/*
+!datasets/raw/.gitkeep
+# Temporary R / editor files
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store

@@ -1,0 +1,12 @@
+column,title,unit,date_range,source
+country,Country,,1750–2025,Our World in Data – Regions (2025)
+year,Year,,1750–2025,Our World in Data – Regions (2025)
+iso_code,ISO code,,1750–2025,International Organization for Standardization – Regions (2023)
+population,Population,people,1750–2025,Population based on various sources (2024)
+co2,Annual CO₂ emissions,million tonnes (Mt),1750–2025,Global Carbon Budget (2026)
+co2_including_luc,Annual CO₂ emissions including land-use change,million tonnes (Mt),1850–2025,Global Carbon Budget (2026)
+co2_per_capita,CO₂ emissions per capita,tonnes per person (t/person),1750–2025,Global Carbon Budget (2026); Population based on various sources (2024)
+consumption_co2,Annual consumption-based CO₂ emissions,million tonnes (Mt),1990–2025,Global Carbon Budget (2026)
+energy_per_capita,Primary energy consumption per capita,kilowatt-hours per person (kWh),1965–2024,U.S. Energy Information Administration – International Energy Data (2026); Energy Institute – Statistical Review of World Energy (2025); Population based on various sources (2024)
+total_ghg,Annual greenhouse gas emissions including land use,million tonnes (Mt),1850–2024,Jones et al. – National contributions to climate change (2025)
+total_ghg_excluding_lucf,Annual greenhouse gas emissions from fossil fuels and industry,million tonnes (Mt),1850–2024,Jones et al. – National contributions to climate change (2025)
