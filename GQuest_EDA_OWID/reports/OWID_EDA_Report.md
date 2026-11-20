@@ -53,11 +53,36 @@ Germany's territorial `co2` decreased **45.63%** between 1990 and 2025 in this p
 
 ![Germany CO2 emissions](../visualizations/germany_co2_1990_2025.png)
 
-\clearpage
-
 ![Germany per-capita CO2 emissions](../visualizations/germany_co2_per_capita_1990_2025.png)
 
-## 5. GreenQuest feature mapping
+## 5. Descriptive statistics
+
+The summary covers the 36 calendar years from 1990 through 2025. Statistics
+use available annual observations, with sample standard deviation and
+quartiles calculated by linear interpolation. Each row uses the indicator's
+original units. Values are rounded to three decimal places.
+
+| Indicator | Unit | Observed | Missing | First year | Last year |
+|---|---|---:|---:|---:|---:|
+| Territorial CO₂ | Mt CO₂ | 36 | 0 | 1990 | 2025 |
+| Territorial CO₂ per capita | t CO₂/person | 36 | 0 | 1990 | 2025 |
+| Total greenhouse gas emissions | Mt CO₂e | 35 | 1 | 1990 | 2024 |
+
+| Indicator | Mean | Median | SD | Min | Q1 | Q3 | Max |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Territorial CO₂ | 833.288 | 848.339 | 121.045 | 573.466 | 789.074 | 917.315 | 1054.796 |
+| CO₂ per capita | 10.166 | 10.447 | 1.579 | 6.788 | 9.626 | 11.194 | 13.233 |
+| Total GHG | 974.134 | 978.997 | 147.009 | 659.655 | 905.751 | 1065.910 | 1261.087 |
+
+Mt denotes million tonnes, t denotes tonnes, and CO₂e denotes carbon dioxide
+equivalent. Q1 and Q3 are the 25th and 75th percentiles. Germany's lowest
+territorial CO₂ total in the period was 573.466 Mt in 2025. The lowest
+per-capita value was 6.788 t CO₂/person in 2024, followed by a small rise in
+2025. Total greenhouse gas emissions averaged 974.134 Mt CO₂e over
+1990–2024. The source series ends in 2024, so the missing 2025 observation
+was excluded from those statistics.
+
+## 6. GreenQuest feature mapping
 
 | Feature | Potential OWID data | Use |
 |---|---|---|
@@ -67,16 +92,16 @@ Germany's territorial `co2` decreased **45.63%** between 1990 and 2025 in this p
 | Personal carbon calculator | **Not supported directly** | Use separate location- and activity-appropriate emission factors |
 | Personalized ML model | **Not supported directly** | Need labeled user-level interaction or preference data |
 
-## 6. Limitations and decisions
+## 7. Limitations and decisions
 
 1. Treat regional/World aggregates separately from countries. Do not add the World figure to the sum of country figures.
 2. Report units explicitly: `co2` is **million tonnes CO₂**, while `co2_per_capita` is **tonnes per person**. Both differ from activity-level kg CO₂e.
 3. Missing values cannot be replaced with zero without justification; particularly note 2025 `total_ghg` missing in the Germany row.
-4. The 2025 observations and codebook reference Global Carbon Budget (2026); source data can be revised. Pin the exact download or upstream commit for reproducibility.
+4. The 2025 observations and codebook reference Global Carbon Budget (2026); source data can be revised. The dataset documentation records the snapshot and SHA-256 checksums for reproducibility.
 5. Do not merge the OWID historical location-year file row-for-row with the UK GHG conversion-factor file. These datasets describe different entities.
 6. Descriptive correlation/trend analysis is not a claim that individual users reduced emissions or that a recommendation model is accurate.
 
-## 7. Next action
+## 8. Next action
 
 Review the EDA results with the team. Then preprocess a minimal verified statistics table for the app, keeping indicator and unit metadata. Perform a separate EDA for the UK GHG factors before building the activity calculator. A user-level dataset is still needed for experimental ML recommendations.
 
@@ -86,4 +111,4 @@ Review the EDA results with the team. Then preprocess a minimal verified statist
 - Upstream project: <https://github.com/owid/co2-data>.
 - Source descriptions and units: supplied OWID codebook (many indicators trace to the Global Carbon Budget and other producers).
 
-*Reproducibility note: Summary statistics were calculated from the referenced CSV snapshot. Run `01_owid_eda.R` locally with the same inputs to verify and reproduce the results.*
+*Reproducibility note: Run `01_owid_eda.R` from the repository root with the checksum-verified inputs to reproduce the five CSV outputs and three figures.*

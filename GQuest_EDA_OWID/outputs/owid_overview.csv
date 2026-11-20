@@ -1,8 +1,8 @@
-metric,value
-rows,56269
-columns,79
-first_year,1750
-last_year,2025
-geographic_entities,259
-duplicated_country_year,0
-codebook_columns,79
+"metric","value"
+"rows",56269
+"columns",79
+"first_year",1750
+"last_year",2025
+"geographic_entities",259
+"duplicated_country_year",0
+"codebook_columns",79

@@ -15,7 +15,7 @@ From the [OWID CO₂ data project](https://github.com/owid/co2-data), save the d
 - `GQuest_EDA_OWID/datasets/raw/owid-co2-data.csv`
 - `GQuest_EDA_OWID/datasets/raw/owid-co2-codebook.csv`
 
-The uploaded files reviewed for this analysis cover 1750–2025, 56,269 rows and 79 columns. The full raw files are deliberately not included in this branch package, because they can be downloaded from the upstream source and change as the dataset is updated. Respect the source's data and attribution requirements.
+The analysed snapshot covers 1750–2025, with 56,269 rows and 79 columns. The raw CSVs are excluded from Git. See the [dataset documentation](datasets/README.md) for the snapshot, sources, and checksum verification.
 
 ## Run (Ubuntu / R)
 
@@ -27,14 +27,14 @@ sudo apt install -y r-base
 Rscript GQuest_EDA_OWID/scripts/01_owid_eda.R
 ```
 
-No R packages are required beyond base R. The script checks input columns, counts missing data and duplicate location-year records, creates a dictionary from the codebook, and exports Germany's 1990–2025 time series and three charts.
+No R packages are required beyond base R. The script checks input columns, counts missing data and duplicate location-year records, creates a dictionary from the codebook, and exports Germany's 1990–2025 time series, descriptive statistics, and three charts.
 
 ## Main files
 
 - `scripts/01_owid_eda.R` — reproducible EDA script
 - `reports/OWID_EDA_Report.md` — documented observations and decisions
-- `reports/OWID_EDA_Report.pdf` — formatted shareable EDA report (provided in the download bundle)
-- `outputs/` — generated summary and Germany extracts
+- [PDF report](reports/OWID_EDA_Report.pdf) — formatted EDA report
+- `outputs/` — generated overview, missingness, data dictionary, and Germany statistics and time series
 - `visualizations/` — generated charts
 
 ## Important interpretation rules

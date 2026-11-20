@@ -1,0 +1,4 @@
+"indicator","unit","non_missing_observations","missing_observations","mean","median","standard_deviation","minimum","q1","q3","maximum","first_available_year","last_available_year"
+"co2","million tonnes CO2",36,0,833.287722222222,848.339,121.045413412986,573.466,789.074,917.315,1054.796,1990,2025
+"co2_per_capita","tonnes CO2 per person",36,0,10.1663055555556,10.447,1.57945722719537,6.788,9.62625,11.1935,13.233,1990,2025
+"total_ghg","million tonnes CO2e",35,1,974.134057142857,978.997,147.00865277934,659.655,905.7515,1065.9105,1261.087,1990,2024
