@@ -1,7 +1,5 @@
 # GreenQuest | OWID CO₂ Exploratory Data Analysis (EDA)
 
-**Jira:** GQUEST-13 · **Dataset:** OWID CO₂ data and codebook (2026 snapshot, includes 2025) · **Analysis date:** 20 November 2026 · **Status:** Initial dataset EDA
-
 ## 1. Purpose and scope
 
 Evaluate the OWID country/region historical CO₂ series for GreenQuest environmental statistics. This dataset is **not** an individual lifestyle dataset and cannot, by itself, provide personalized challenges or activity-level carbon footprints. The UK 2026 GHG conversion-factor dataset must be analysed separately.
@@ -100,10 +98,6 @@ was excluded from those statistics.
 4. The 2025 observations and codebook reference Global Carbon Budget (2026); source data can be revised. The dataset documentation records the snapshot and SHA-256 checksums for reproducibility.
 5. Do not merge the OWID historical location-year file row-for-row with the UK GHG conversion-factor file. These datasets describe different entities.
 6. Descriptive correlation/trend analysis is not a claim that individual users reduced emissions or that a recommendation model is accurate.
-
-## 8. Next action
-
-Review the EDA results with the team. Then preprocess a minimal verified statistics table for the app, keeping indicator and unit metadata. Perform a separate EDA for the UK GHG factors before building the activity calculator. A user-level dataset is still needed for experimental ML recommendations.
 
 ## Data sources
 
